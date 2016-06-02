@@ -1,18 +1,15 @@
-var webpack = require('webpack');
+var debug = process.env.NODE_ENV !== "production";
 var path = require('path');
+var webpack = require('webpack');
 
 module.exports = {
-  context: __dirname,
-  devtool: 'inline-source-map',
-  entry: [
-    'webpack-dev-server/client?http://127.0.0.1:8080/',
-    'webpack/hot/only-dev-server',
-    './js/app.js'
-  ],
+  context: path.join(__dirname, 'src'),
+  devtool: debug ? 'inline-source-map' : null,
+  entry: './js/app.js',
   module: {
     loaders: [
       {
-        test: /\.jsx?$/,
+        test: /\.js?$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
@@ -23,12 +20,13 @@ module.exports = {
     ]
   },
   output: {
-    path: path.join(__dirname, 'public'),
+    path: path.join(__dirname, 'src'),
     filename: 'app.min.js'
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
+  plugins: debug ? [] : [
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.optimize.UglifyJsPlugin({ mange: false, sourcemap: false})
   ],
   resolve: {
     modulesDirectories: ['node_modules', 'js'],

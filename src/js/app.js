@@ -1,13 +1,9 @@
+
 import React from "react";
 import ReactDOM from "react-dom";
+import { Router, Route, IndexRoute, hashHistory } from "react-router";
 
-class Layout extends React.Component {
-  render() {
-    return (
-      <h1>Layout Component!</h1>
-    );
-  }
-}
+import Layout from "./components/Layout";
 
 const app = document.getElementById("app");
 
