@@ -3,7 +3,7 @@ import React from "react";
 export default class About extends React.Component {
   render() {
     return (
-      <section class="about">
+      <section class="about top-150">
         <h1>Hello!</h1>
         <p>
           My name is Nathan Nichols-Roy.

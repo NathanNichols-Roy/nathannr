@@ -10,11 +10,11 @@ export default class Layout extends React.Component {
     return (
       <div>
         <Header />
-        <section class="container">
+        <div class="container">
           <About />
           <Resume />
           <Contact />
-        </section>
+        </div>
       </div>
     );
   }
