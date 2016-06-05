@@ -6,7 +6,8 @@ export default class About extends React.Component {
       <section class="about top-150">
         <h1>Hello!</h1>
         <p>
-          My name is Nathan Nichols-Roy.
+          My name is Nathan Nichols-Roy. I am a young web developer currently
+          living in sunny San Diego. I am a recent graduate from UC Santa Cruz.
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac
           ipsum quam. Duis porttitor nec lectus sed laoreet. Pellentesque felis
           metus, sollicitudin sed justo vitae, consectetur elementum lorem.

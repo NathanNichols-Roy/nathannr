@@ -3,8 +3,7 @@ import React from "react";
 export default class Resume extends React.Component {
   render() {
     return (
-      <section>
-        <h2>Here's my resume</h2>
+      <div class="top-200">
         <h3>Experience</h3>
         <div class="col-xs-4">Web Developer</div>
         <div class="col-xs-4">GoPaperless Solutions</div>
@@ -25,7 +24,6 @@ export default class Resume extends React.Component {
             <li>Participated in peer code reviews.</li>
           </ul>
         </div>
-        <h3>Education</h3>
         <div class="col-xs-4">Santa Cruz, California</div>
         <div class="col-xs-4">University of California Santa Cruz</div>
         <div class="col-xs-4">Fall 2010 - Fall 2014</div>
@@ -34,7 +32,7 @@ export default class Resume extends React.Component {
             <li>B.S. in Computer Science. GPA: 3.4</li>
           </ul>
         </div>
-      </section>
+      </div>
     );
   }
 }
