@@ -36,3 +36,81 @@ textarea {
 .contact-form {
   background-color: #333;
 }
+
+/*=== Skills Graph ===*/
+
+#skills-graph {
+  background: transparent;
+  display: block;
+  font-size: 15px;
+  height: 350px;
+  position: relative;
+  padding: 0;
+  width: 600px;
+}
+
+#skills-graph tr, #skills-graph th, #skills-graph td {
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  width: 60px;
+}
+
+#skills-graph tbody th {
+  bottom: -1.75em;
+  vertical-align: top;
+}
+
+#skills-graph #asp {
+  left: 15px;
+}
+
+#skills-graph #javascript {
+  left: 115px;
+}
+
+#skills-graph #css {
+  left: 215px;
+}
+
+#skills-graph #html {
+  left: 315px;
+}
+
+#skills-graph #sql {
+  left: 415px;
+}
+
+#skills-graph #react {
+  left: 515px;
+}
+
+#skills-graph .bar {
+  background-color: #E74C3C;
+  border-bottom: none;
+  width: 60px;
+}
+
+#ticks {
+  font-size: 15px;
+  height: 350px;
+  position: relative;
+  top: -280px;
+  width: 600px;
+}
+
+#ticks .tick {
+  border-top: 1px dotted #C4C4C4;
+  height: 70px;
+  position: relative;
+  width: 600px;
+}
+
+#ticks .tick p {
+  font-size: 14px;
+  left: -6em;
+  position: absolute;
+  top: -1.5em;
+}

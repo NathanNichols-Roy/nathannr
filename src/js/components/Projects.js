@@ -3,8 +3,8 @@ import React from "react";
 export default class Projects extends React.Component {
   render() {
     return (
-      <section class="top-150">
-        <h3>Projects</h3>
+      <section class="top-150 row">
+        <h3 class="text-center">PROJECTS</h3>
         <p>IBM Polymer Recognition Software</p>
         <p>
           Global Game Jam
