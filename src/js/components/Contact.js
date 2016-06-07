@@ -1,10 +1,15 @@
 import React from "react";
+import Scroll from "react-scroll";
+
+const Element = Scroll.Element;
 
 export default class Contact extends React.Component
 {
   render() {
     return (
       <div class="contact top-150">
+        <Element name="contactForm"></Element>
+
         <form class="contact-form col-md-6 col-md-offset-3"
           action="https://formspree.io/n.nicholsroy@gmail.com" method="POST">
           <h2>Contact me</h2>
