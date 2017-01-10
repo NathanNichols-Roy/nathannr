@@ -5,7 +5,7 @@ var webpack = require('webpack');
 module.exports = {
   context: path.join(__dirname, 'src'),
   devtool: debug ? 'inline-source-map' : null,
-  entry: './js/app.js',
+  entry: './js/main.js',
   module: {
     loaders: [
       {
@@ -13,15 +13,15 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
-          presets: ['react', 'es2015'],
-          plugins: ['react-html-attrs', 'transform-class-properties']
+          presets: ['es2015'],
+          plugins: ['transform-class-properties']
         }
       }
     ]
   },
   output: {
     path: path.join(__dirname, 'src'),
-    filename: 'app.min.js'
+    filename: 'main.min.js'
   },
   plugins: debug ? [] : [
     new webpack.optimize.DedupePlugin(),

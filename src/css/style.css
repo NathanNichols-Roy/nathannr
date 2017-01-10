@@ -1,116 +1,210 @@
-h1 {
-  font-size: 70px;
+body {
+  background-color: #fdfdfd;
+}
+
+.header {
+  align-items: center;
+  background-image: url("../img/header.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  height: 400px;
+  justify-content: center;
+  text-align: center;
+}
+
+.media-links {
+  align-items: flex-end;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.media-links a {
+  margin: 0 3px;
+}
+
+.footer {
+  margin-top: 50px;
+}
+
+.footer-links {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 15px;
+}
+
+/*--------------------
+Games thubnails
+--------------------*/
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575px) {
+  .games-container a {
+      max-width: 100%;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .games-container a {
+      max-width: 100%;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .games-container a {
+      max-width: 100%;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .games-container a {
+      max-width: 50%;
+  }
+}
+
+/* Extra large devices (desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .games-container a {
+    max-width: 33.33%;
+    max-width: calc(100%/3);
+  }
+}
+
+.games-container {
+  align-items: stretch;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.games-container a {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  height: 120px;
+  width: 100%;
+}
+
+.games-container a span {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  opacity: .3;
   font-weight: bold;
-}
-
-p {
-  font-size: 20px;
-  line-height: 35px;
-}
-
-textarea {
-  resize: vertical;
-}
-
-.top-200 {
-  margin-top: 200px;
-}
-
-.top-150 {
-  margin-top: 150px;
-}
-
-.top-20 {
-  margin-top: 20px;
-}
-
-.bottom-150 {
-  margin-bottom: 150px;
-}
-
-.contact {
+  font-size: 0px;
   text-align: center;
-  margin-bottom: 120px;
+  transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  width: 100%;
 }
 
-.contact-form {
-  background-color: #333;
+.games-container a span:hover {
+  transition: all .3s ease-in-out;
+  -webkit-transition: all .3 ease-in-out;
+  opacity: .8;
+  font-size: 30px;
+  animation: show-overlay .3s ease-in-out forwards;
 }
 
-/*=== Skills Graph ===*/
-
-#skills-graph {
-  background: transparent;
-  display: block;
-  font-size: 15px;
-  height: 350px;
-  position: relative;
-  padding: 0;
-  width: 600px;
+@keyframes show-overlay {
+  0% { font-size: 30px; }
 }
 
-#skills-graph tr, #skills-graph th, #skills-graph td {
-  bottom: 0;
-  margin: 0;
-  padding: 0;
-  position: absolute;
+.games-container .ssbm {
+  background-image: url("../img/ssbm.jpg");
+}
+
+.games-container .overwatch {
+  background-image: url("../img/overwatch.jpg");
+  background-position: 50% 39%;
+}
+
+.games-container .darksouls {
+  background-image: url("../img/darksouls.jpg");
+  background-position: center top;
+}
+
+.games-container .wow {
+  background-image: url("../img/wow.jpg");
+  background-position: 50% 28%;
+}
+
+.games-container .dota {
+  background-image: url("../img/dota.jpg");
+}
+
+.games-container .hyperlightdrifter {
+  background-image: url("../img/hyperlightdrifter.jpg");
+  background-position: top right;
+}
+
+/*--------------------
+Loading Animation
+--------------------*/
+
+.animationContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.dot {
+  background: #5e5959;
+  border: 1px solid white;
+  border-radius: 50%;
+  display: inline-flex;
+  height: 10px;
+  margin: 0 3px;
+  width: 10px;
+}
+
+.dot1 {
+  animation: bounce 1.5s ease-in-out infinite;
+}
+
+.dot2 {
+  animation: bounce 1.5s ease-in-out 0.2s infinite;
+}
+
+.dot3 {
+  animation: bounce 1.5s ease-in-out 0.4s infinite;
+}
+
+.dot4 {
+  animation: bounce 1.5s ease-in-out 0.6s infinite;
+}
+
+.dot5 {
+  animation: bounce 1.5s ease-in-out 0.8s infinite;
+}
+
+.dot6 {
+  animation: bounce 1.5s ease-in-out 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 50% { transform: translateY(0px); }
+  25% { transform: translateY(-25px); }
+}
+
+/*--------------------
+Helper Classes
+--------------------*/
+
+.text-center {
   text-align: center;
-  width: 60px;
 }
 
-#skills-graph tbody th {
-  bottom: -1.75em;
-  vertical-align: top;
-}
-
-#skills-graph #asp {
-  left: 15px;
-}
-
-#skills-graph #javascript {
-  left: 115px;
-}
-
-#skills-graph #css {
-  left: 215px;
-}
-
-#skills-graph #html {
-  left: 315px;
-}
-
-#skills-graph #sql {
-  left: 415px;
-}
-
-#skills-graph #react {
-  left: 515px;
-}
-
-#skills-graph .bar {
-  background-color: #E74C3C;
-  border-bottom: none;
-  width: 60px;
-}
-
-#ticks {
-  font-size: 15px;
-  height: 350px;
-  position: relative;
-  top: -280px;
-  width: 600px;
-}
-
-#ticks .tick {
-  border-top: 1px dotted #C4C4C4;
-  height: 70px;
-  position: relative;
-  width: 600px;
-}
-
-#ticks .tick p {
-  font-size: 14px;
-  left: -6em;
-  position: absolute;
-  top: -1.5em;
+.text-dim {
+  color: #e4e4e4;
 }
