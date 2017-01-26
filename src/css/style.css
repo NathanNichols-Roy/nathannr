@@ -1,18 +1,66 @@
 body {
-  background-color: #fdfdfd;
+  background-color: #E0F2F1;
 }
 
-.header {
+header {
   align-items: center;
-  background-image: url("../img/header.jpg");
+  /*background-image: url("../img/header.png");*/
+  background-color: #009688;
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   color: white;
   display: flex;
-  height: 400px;
+  height: 200px;
   justify-content: center;
   text-align: center;
 }
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: black;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: black;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: black;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: black;
+}
+
+input[type="email"], input[type="text"], textarea {
+  background-color: #E0F2F1;
+  border-color: black;
+  color: black;
+}
+
+input[type="submit"] {
+  background-color: #64FFDA;
+  border-color: black;
+  color: black;
+}
+
+#svgContainer {
+  background-color: #009688;
+  color: white;
+  padding: 10px 0 4px 0;
+}
+
+.st0 {
+  fill: none;
+  stroke:#FFFFFF;
+  stroke-miterlimit: 10;
+  stroke-width: 3;
+}
+
+/*@keyframes draw {
+  0% {
+    stroke-dashoffset: 500;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}*/
 
 .media-links {
   align-items: flex-end;
@@ -24,7 +72,23 @@ body {
   margin: 0 3px;
 }
 
-.footer {
+section, section.container {
+  margin-bottom: 150px;
+}
+
+#game-section {
+  background-color: #009688;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+footer {
   margin-top: 50px;
 }
 
@@ -41,47 +105,81 @@ Games thubnails
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575px) {
-  .games-container a {
+  /*.games-container a {
       max-width: 100%;
+  }*/
+
+  .contact-card {
+    max-width: 100%;
   }
 }
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
-  .games-container a {
+  /*.games-container a {
       max-width: 100%;
+  }*/
+
+  .contact-card {
+    max-width: 100%;
   }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  .games-container a {
+  /*.games-container a {
       max-width: 100%;
+  }*/
+
+  .contact-card {
+    max-width: 70%;
   }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  .games-container a {
+  /*.games-container a {
       max-width: 50%;
+  }*/
+
+  .contact-card {
+    max-width: 70%;
   }
 }
 
 /* Extra large devices (desktops, 1200px and up) */
 @media (min-width: 1200px) {
-  .games-container a {
+  /*.games-container a {
     max-width: 33.33%;
     max-width: calc(100%/3);
+  }*/
+
+  .contact-card {
+    max-width: 60%;
   }
 }
 
 .games-container {
-  align-items: stretch;
   display: flex;
+  align-items: flex-start;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   width: 100%;
+}
+
+.game {
+  position: absolute;
+  top: -2px;
+  left: -7px;
+  height: 125px;
+  width: 315px;
+}
+
+.games-container figure {
+  margin: 10px;
+  position: relative;
+  width: 300px;
 }
 
 .games-container a {
@@ -89,6 +187,8 @@ Games thubnails
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
+  opacity: 0;
+  transition: opacity 1s ease-in-out 1s;
   height: 120px;
   width: 100%;
 }
@@ -200,6 +300,10 @@ Loading Animation
 /*--------------------
 Helper Classes
 --------------------*/
+
+.bottom-50 {
+  margin-bottom: 50px;
+}
 
 .text-center {
   text-align: center;
