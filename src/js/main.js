@@ -60,10 +60,13 @@
     var self = this;
     var progress = this.current_frame/this.total_frames;
 
+    this.elem.style.opacity = 1;
+
+    // animation end
     if (progress > 1) {
-      // cancel animation
       window.cancelAnimFrame(this.animation_frame);
 
+      // fade out svg after animation end
       if (this.elem.parentNode.tagName === "FIGURE") {
         this.elem.style.opacity = 0;
       }
